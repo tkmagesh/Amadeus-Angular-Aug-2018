@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Bug } from './models/Bug';
 import { BugOperationsService } from './services/bugOperations.service';
-
+import { DummyService } from '../dummy.service';
 
 @Component({
 	selector : 'app-bug-tracker',
@@ -17,7 +17,7 @@ export class BugTrackerComponent implements OnInit{
 
 
 
-	constructor(private bugOperations : BugOperationsService){
+	constructor(private bugOperations : BugOperationsService, private dummyService : DummyService ){
 		
 	}
 
@@ -26,6 +26,7 @@ export class BugTrackerComponent implements OnInit{
 	}
 	
 	onNewBugAdded(newBug : Bug){
+		this.dummyService.increment();
 		this.bugs = [...this.bugs, newBug];
 	}
 

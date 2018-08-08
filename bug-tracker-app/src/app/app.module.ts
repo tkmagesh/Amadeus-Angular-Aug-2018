@@ -14,6 +14,8 @@ import { BugOperationsService } from './bugTracker/services/bugOperations.servic
 import { BugStorageService } from './bugTracker/services/bugStorage.service';
 
 import { ClosedCountPipe } from './bugTracker/pipes/closedCount.pipe';
+import { DummyService } from './dummy.service';
+import { DummyComponent } from './dummy.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +24,7 @@ import { ClosedCountPipe } from './bugTracker/pipes/closedCount.pipe';
     , BugStatsComponent
     , ClosedCountPipe
     , BugEditComponent
+    , DummyComponent
   ],
   imports: [
     BrowserModule
@@ -31,6 +34,7 @@ import { ClosedCountPipe } from './bugTracker/pipes/closedCount.pipe';
   providers: [
   	BugOperationsService
     , BugStorageService
+    , DummyService
   ],
   bootstrap: [AppComponent]
 })
