@@ -22,9 +22,7 @@ export class BugTrackerComponent implements OnInit{
 	}
 
 	ngOnInit(){
-		this.bugOperations
-			.getAll()
-			.subscribe(bugs => this.bugs = bugs);
+		this.bugs = this.bugOperations.getAll();
 	}
 	
 	onNewBugAdded(newBug : Bug){
@@ -33,17 +31,14 @@ export class BugTrackerComponent implements OnInit{
 	}
 
 	onBugNameClick(bugToToggle : Bug){
-		
-		this.bugOperations
-			.toggle(bugToToggle)
-			.subscribe(toggledBug => this.bugs = this.bugs.map(bug => bug === bugToToggle ? toggledBug : bug));
-		
+		let toggledBug = this.bugOperations.toggle(bugToToggle);
+		this.bugs = this.bugs.map(bug => bug === bugToToggle ? toggledBug : bug);
 	}
 
 	onRemoveClosedClick(){
 		this.bugs
 			.filter(bug => bug.isClosed)
-			.forEach(closedBug => this.bugOperations.remove(closedBug).subscribe(_ => {}));
+			.forEach(closedBug => this.bugOperations.remove(closedBug));
 		this.bugs = this.bugs.filter(bug => !bug.isClosed);
 		
 	}
