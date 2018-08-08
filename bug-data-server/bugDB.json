@@ -18,6 +18,13 @@
       "name": "Server communication failure",
       "isClosed": false,
       "createdAt": "2018-08-08T11:20:45.612Z"
+    },
+    {
+      "id": 6,
+      "name": "sfad fdsgfsdgfsd",
+      "isClosed": false,
+      "createdAt": "2018-08-08T11:40:48.721Z",
+      "desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur aliquam id pariatur ipsa expedita nesciunt doloribus facilis architecto quisquam totam veniam odio, minima, labore deleniti, neque nam quia amet eveniet."
     }
   ],
   "projects": [
