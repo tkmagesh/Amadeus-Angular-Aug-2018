@@ -1,6 +1,10 @@
 import { Component, Input, ChangeDetectionStrategy } from '@angular/core';
 
 import { Bug } from '../models/Bug';
+import * as moment from 'moment';
+
+console.log(moment('2018-07-26T09:33:36.892Z').fromNow());
+
 
 @Component({
 	selector : 'app-bug-stats',
